@@ -1,0 +1,7 @@
+{
+  "name": "DeliAPP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
