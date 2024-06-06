@@ -3,6 +3,9 @@ ion-toolbar{
     color: azure;
 }
 
-ion-content {
-    --background: url('/assets/imagenes/home3') no-repeat center center / cover;
+ion-content.fonthome {
+    --background: url("../../assets/imagenes/home.png") no-repeat center center/auto;
+  
   }
+
+ 
