@@ -15,3 +15,5 @@ describe('InfoPage', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
