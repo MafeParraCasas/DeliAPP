@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="mycolor">
-    <ion-buttons slot="start"> 
+    <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Elegir productos</ion-title>
@@ -10,17 +10,32 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">compras</ion-title>
+      <ion-title size="large">Compras</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-list>
-    <ion-item *ngFor="let product of products">
-      <ion-label>
-        {{ product.name }} - ${{ product.price }}
-      </ion-label>
-      <ion-button (click)="addToCart(product)">
-        Add to Cart
-      </ion-button>
-    </ion-item>
-  </ion-list>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let product of products">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>{{ product.name }}</ion-card-title>
+            <ion-card-subtitle>${{ product.price }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Descripción del producto</p>
+            <ion-item lines="none" class="quantity-controls">
+              <ion-label class="product-quantity">{{ getProductQuantity(product) }}</ion-label>
+              <ion-button (click)="removeFromCart(product)" [disabled]="getProductQuantity(product) === 0">
+                -
+              </ion-button>
+              <ion-button (click)="addToCart(product)">
+                +
+              </ion-button>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
