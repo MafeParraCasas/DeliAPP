@@ -1,0 +1,48 @@
+ion-toolbar{
+    background-color: var(--ion-color-mycolor);
+    color: azure;
+}
+
+.title{
+    text-align: center; 
+    justify-content: center;
+    font-weight: bold;
+}
+
+div.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.logo{
+    width:10%;
+    height: 10%;
+}
+
+.footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: gray;
+}
+
+.payButton {
+
+}
+
+.price {
+    color: red;
+}
+
+.card {
+    margin: 0 !important;
+}
+
+ion-accordion-group {
+    margin: 0;
+}
+
+.item {
+    display: flex;
+}
