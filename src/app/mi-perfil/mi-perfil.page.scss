@@ -1,4 +1,227 @@
-ion-toolbar{
-    background-color: var(--ion-color-mycolor);
-    color: azure;
+.container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.logo {
+  width: 10%;
+  height: 10%;
+}
+
+/* Asegúrate de que los estilos de la franja verde se apliquen correctamente */
+h2 {
+  color: white;
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+ion-toolbar {
+  background-color: var(--ion-color-mycolor);
+  color: azure;
+}
+
+div.ini {
+  display: flex;
+  justify-content: flex-start;
+}
+
+div.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 10%;
+  height: 10%;
+}
+
+/* Scoped components require higher specificity to customize */
+ion-searchbar.custom {
+  --background: hsl(149, 45%, 18%);
+  --color: #fff;
+  --placeholder-color: #fff;
+  --icon-color: #fff;
+  --clear-button-color: #fff;
+
+  --border-radius: 4px;
+}
+
+ion-searchbar.ios.custom {
+  --cancel-button-color: #19422d;
+}
+
+ion-searchbar.md.custom {
+  --cancel-button-color: #fff;
+}
+
+div.buscador {
+  margin-top: 3%;
+}
+
+.toolbar-title {
+  width: 0%;
+}
+
+.text {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.migapan {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(232, 239, 245);
+}
+
+.tex {
+  margin: 4%;
+}
+
+@media (max-width: 600px) {
+  .container .logo {
+    width: 25vw; /* Ajusta el tamaño para pantallas más pequeñas */
+  }
+
+  div.ini {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .container ion-avatar {
+    width: 11vw; /* Ajusta el tamaño para pantallas más pequeñas */
+    height: 11vw; /* Asegúrate de que el ancho y alto sean iguales */
+  }
+}
+
+ion-content {
+  --background: url('/assets/imagenes/perfil.jpg') no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.profile-container {
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background for better readability */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  width: 100%; /* Cambiado de max-width a width */
+  box-sizing: border-box;
+  color: #fff;
+  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-image {
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-info label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.profile-info input {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.logout-button {
+  width: calc(100% - 16px);
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
+
+.logout-button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para el formulario emergente */
+.edit-form {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.7); /* Negro transparente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+.edit-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: #fff; /* Color de texto blanco */
+}
+
+.edit-form input[type="text"],
+.edit-form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1); /* Blanco transparente */
+  color: #fff; /* Color de texto blanco */
+}
+
+.edit-form input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.edit-form .save-button,
+.edit-form .cancel-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; /* Centrar horizontalmente */
+}
+
+.edit-form .cancel-button {
+  margin-top: 10px; /* Separación entre botones */
+}
+
+.edit-form .save-button:hover,
+.edit-form .cancel-button:hover {
+  background-color: #0056b3;
 }

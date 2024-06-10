@@ -6,12 +6,12 @@
 
     <div class="container">
       <div class="ini">
-        <ion-title>INICIO</ion-title>
+        <ion-title></ion-title>
       </div>
 
       <img class="logo" alt="logo" src="../../assets/imagenes/logo.png">
       <ion-avatar>
-        <img alt="Silhouette of a person's head" src="../../assets/imagenes/avatar.jpeg" />
+        <img alt="Silhouette of a person's head" [src]="profile.photo || '../../assets/imagenes/avatar.jpeg'" />
       </ion-avatar>
     </div>
   </ion-toolbar>
@@ -23,7 +23,6 @@
   <div class="buscador">
     <ion-searchbar showCancelButton="focus" class="custom"></ion-searchbar>
   </div>
-
 
   <div class="migapan">
     <ion-breadcrumbs>
@@ -49,6 +48,5 @@
   </div>
   
   <p class="tex">POPULAR </p>
-
 
 </ion-content>
