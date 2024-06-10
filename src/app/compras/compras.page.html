@@ -3,7 +3,7 @@
     <ion-buttons slot="start"> 
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>compras</ion-title>
+    <ion-title>Elegir productos</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,4 +13,14 @@
       <ion-title size="large">compras</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let product of products">
+      <ion-label>
+        {{ product.name }} - ${{ product.price }}
+      </ion-label>
+      <ion-button (click)="addToCart(product)">
+        Add to Cart
+      </ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>
