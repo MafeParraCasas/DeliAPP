@@ -7,10 +7,24 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">restaurantes</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let restaurante of restaurantes" lines="none" class="restaurant-item">
+      <ion-thumbnail class="restaurant-thumbnail">
+        <img [src]="restaurante.image" alt="{{ restaurante.name }}" class="restaurant-image">
+      </ion-thumbnail>
+      <div class="restaurant-details">
+        <ion-label class="restaurant-label">
+          <h2>{{ restaurante.name }}</h2>
+          <p>{{ restaurante.description }}</p>
+          <p><strong>Teléfono:</strong> {{ restaurante.phone }}</p>
+          <p><strong>Dirección:</strong> {{ restaurante.address }}</p>
+        </ion-label>
+        <ion-button expand="block" (click)="goToCompras()" class="pedido-button">
+          Pedir Domicilio
+        </ion-button>
+      </div>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
