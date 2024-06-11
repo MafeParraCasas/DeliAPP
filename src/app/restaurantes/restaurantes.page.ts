@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
-import { NavController } from '@ionic/angular';
-
-
+import { IonicModule, NavController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-restaurantes',
@@ -17,7 +15,10 @@ import { NavController } from '@ionic/angular';
     IonicModule
   ]
 })
-export class RestaurantesPage {
+export class RestaurantesPage implements OnInit {
+  profile: any = {
+    photo: 'assets/imagenes/avatar.jpeg' // Imagen por defecto
+  };
   restaurantes = [
     { 
       name: 'El Colombiano',
@@ -91,10 +92,13 @@ export class RestaurantesPage {
     }
   ];
 
-  constructor(private navCtrl: NavController) {}
+  constructor(private navCtrl: NavController, private authService: AuthService) {}
+
+  ngOnInit() {
+    this.profile = this.authService.getProfile();
+  }
 
   goToCompras() {
     this.navCtrl.navigateForward('/compras');
   }
- 
 }

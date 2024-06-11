@@ -1,114 +1,146 @@
-ion-toolbar{
-    background-color: var(--ion-color-mycolor);
-    color: azure;
+.container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
-ion-card {
-    margin: 16px;
-  }
-  
-  ion-img {
-    max-height: 200px;
-    object-fit: cover;
-  }
-  
-  ion-card-title {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-  
-  ion-card-content p {
-    font-size: 1em;
-    color: #666;
+.logo {
+  width: 10%;
+  height: 10%;
+}
+
+/* Asegúrate de que los estilos de la franja verde se apliquen correctamente */
+h2 {
+  color: white;
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+ion-toolbar {
+  background-color: var(--ion-color-mycolor);
+  color: azure;
+}
+
+div.ini {
+  display: flex;
+  justify-content: flex-start;
+}
+
+div.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 10%;
+  height: 10%;
+}
+
+/* Scoped components require higher specificity to customize */
+ion-searchbar.custom {
+  --background: hsl(149, 45%, 18%);
+  --color: #fff;
+  --placeholder-color: #fff;
+  --icon-color: #fff;
+  --clear-button-color: #fff;
+  --border-radius: 4px;
+}
+
+ion-searchbar.ios.custom {
+  --cancel-button-color: #19422d;
+}
+
+ion-searchbar.md.custom {
+  --cancel-button-color: #fff;
+}
+
+div.buscador {
+  margin-top: 3%;
+}
+
+.toolbar-title {
+  width: 0%;
+}
+
+.text {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.migapan {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(232, 239, 245);
+}
+
+.tex {
+  margin: 4%;
+}
+
+@media (max-width: 600px) {
+  .container .logo {
+    width: 25vw; /* Ajusta el tamaño para pantallas más pequeñas */
   }
 
-  .restaurant-image {
-    max-width: 100px; /* Tamaño máximo de ancho */
-    max-height: 100px; /* Tamaño máximo de alto */
-    width: auto; /* Ajusta automáticamente el ancho en función del tamaño máximo */
-    height: auto; /* Ajusta automáticamente la altura en función del tamaño máximo */
-  }
-
-  .restaurant-item {
-    padding: 10px;
-  }
-  
-  .restaurant-content {
+  div.ini {
     display: flex;
-    align-items: center;
-  }
-  
-  .restaurant-thumbnail {
-    width: 100px; /* Ajusta el ancho del thumbnail según sea necesario */
-    height: 100px; /* Ajusta el alto del thumbnail según sea necesario */
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
-  }
-  
-  .restaurant-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajusta la imagen para que mantenga sus proporciones */
-  }
-  
-  .restaurant-label {
-    flex: 1; /* El contenido ocupa todo el espacio disponible */
+    justify-content: flex-start;
   }
 
-  .restaurantes-page {
-    .restaurantes-container {
-      background-color: #fff; /* Fondo negro */
-      padding: 20px; /* Espaciado interior */
-    }
-  
-    .restaurant-item {
-      background-color: #fff; /* Fondo oscuro para cada ítem */
-      margin-bottom: 10px; /* Espacio entre ítems */
-      border-radius: 8px; /* Bordes redondeados */
-      padding: 10px; /* Espaciado interior */
-      color: #fff; /* Color de texto blanco */
-    }
-  
-    .restaurant-content {
-      display: flex;
-      align-items: center;
-    }
-  
-    .restaurant-thumbnail {
-      width: 50px; /* Ajusta el ancho del thumbnail según sea necesario */
-      height: 50px; /* Ajusta el alto del thumbnail según sea necesario */
-      margin-right: 10px; /* Espacio entre la imagen y el texto */
-    }
-  
-    .restaurant-thumbnail img {
-      width: 50%;
-      height: 50%;
-      object-fit: cover; /* Ajusta la imagen para que mantenga sus proporciones */
-      border-radius: 50%; /* Bordes redondeados para la imagen */
-    }
-  
-    .restaurant-label {
-      flex: 1; /* El contenido ocupa todo el espacio disponible */
-    }
-
-    .restaurant-item {
-      .restaurant-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    
-        .restaurant-thumbnail {
-          position: relative;
-    
-          .pedido-button {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50%;
-            max-width: 300px;
-          }
-        }
-      }
-    }
+  .container ion-avatar {
+    width: 11vw; /* Ajusta el tamaño para pantallas más pequeñas */
+    height: 11vw; /* Asegúrate de que el ancho y alto sean iguales */
   }
+}
+
+.restaurant-item {
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interior */
+  margin-bottom: 10px; /* Espacio entre los ítems */
+  position: relative; /* Para posicionar el botón de pedir domicilio */
+  color: white; /* Color del texto dentro de la caja */
+}
+
+.restaurant-container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(37, 37, 37); /* Aplica un fondo negro al contenedor principal */
+  border-radius: 10px; /* Añade bordes redondeados */
+  padding: 10px; /* Añade un poco de espacio interior */
+  margin-bottom: 10px; /* Espacio entre los ítems */
+}
+
+.restaurant-thumbnail {
+  width: 100px; /* Ajusta el ancho del thumbnail según sea necesario */
+  height: 100px; /* Ajusta el alto del thumbnail según sea necesario */
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
+  background-color: rgb(0, 0, 0); /* Aplica un fondo negro al contenedor de la imagen */
+  border-radius: 10px; /* Añade bordes redondeados */
+}
+
+.restaurant-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que mantenga sus proporciones */
+  border-radius: 10px; /* Añade bordes redondeados */
+}
+
+.restaurant-details {
+  flex: 1; /* El contenido ocupa todo el espacio disponible */
+  background-color: rgb(37, 37, 37); /* Aplica un fondo negro al contenedor */
+  border-radius: 10px; /* Añade bordes redondeados */
+  padding: 10px; /* Espaciado interior */
+  color: white; /* Color del texto dentro del contenedor */
+}
+
+
+.pedido-button {
+  margin-top: 10px; /* Agrega un margen superior para separar el botón */
+}

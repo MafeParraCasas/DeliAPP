@@ -3,34 +3,57 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Información</ion-title>
+
+    <div class="container">
+      <div class="ini">
+        <ion-title> </ion-title>
+      </div>
+
+      <img class="logo" alt="logo" src="../../assets/imagenes/logo.png">
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" [src]="profile.photo || '../../assets/imagenes/avatar.jpeg'" />
+      </ion-avatar>
+    </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true"  class="fonthome">
-  
-  <!-- Otros contenidos de tu página -->
 
-
+<ion-content [fullscreen]="true" class="fonthome">
   <div class="cardpri">
     <div class="ion-card-title">
       <ion-card>
         <ion-card-header>
-          <ion-card-title>DeliAPP</ion-card-title>
-          <ion-card-subtitle>Delivery Restaurants</ion-card-subtitle>
+          <ion-card-title>¿Quiénes somos?</ion-card-title>
         </ion-card-header>
-      
         <ion-card-content>
-          Compra y entrega a Domicilio de restaurantes de la Zona, DeliAPP te permite navegar en una interfaz agradable
-          y dinamica. 
+          Somos una aplicación de entrega de alimentos a domicilio que conecta a los usuarios con una variedad de restaurantes locales. Nuestra misión es proporcionar una experiencia de pedido rápida, conveniente y segura para nuestros clientes.
         </ion-card-content>
       </ion-card>
     </div>
   </div>
-
+  <div class="cardpri">
+    <div class="ion-card-title">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>¿Qué hacemos?</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Facilitamos el proceso de pedido de alimentos a domicilio al ofrecer una plataforma intuitiva y fácil de usar. Nuestros usuarios pueden explorar una amplia selección de restaurantes, realizar pedidos y realizar un seguimiento del estado de su entrega en tiempo real.
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <div class="cardpri">
+    <div class="ion-card-title">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Nuestro propósito</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Nuestro propósito es brindar comodidad y satisfacción a nuestros clientes al garantizar que sus alimentos favoritos estén disponibles para ser entregados directamente a su puerta. Valoramos la calidad, la eficiencia y la confiabilidad en todos nuestros servicios.
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
   
-
-
- 
-
 </ion-content>
