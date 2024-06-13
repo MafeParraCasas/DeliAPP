@@ -73,26 +73,26 @@ export class MenuPage implements OnInit {
           { 
             name: 'Aroz con coco', 
             price: 45000, 
-            description: 'Arroz, frijoles, chicharrón, carne molida, huevo, plátano maduro y arepa',
-            image: '/assets/imagenes/bandeja-paisa.jpg' // Agrega la URL de la imagen aquí
+            description: 'Arroz con coco, patacon y ensalada',
+            image: '/assets/imagenes/arrozCoco.jpg' // Agrega la URL de la imagen aquí
           },
           { 
             name: 'Sopa de bagre', 
             price: 32000, 
-            description: 'Sopa típica con pollo, papa, maíz y guascas',
-            image: '/assets/imagenes/ajiaco.jpg' // Agrega la URL de la imagen aquí
+            description: 'Sopa de bagre con arrzo, aguacate y jugo',
+            image: '/assets/imagenes/sopaBagre.jpg' // Agrega la URL de la imagen aquí
           },
           { 
-            name: 'Calamar marinado', 
+            name: 'Pulp marinado', 
             price: 65000, 
-            description: 'Sancocho de gallina, pierna pernil, arroz y aguacate',
-            image: '/assets/imagenes/sancocho.jpg' // Agrega la URL de la imagen aquí
+            description: 'Pulpo marinado a las brasas',
+            image: '/assets/imagenes/pulpo.jpg' // Agrega la URL de la imagen aquí
           },
           { 
             name: 'Seviche', 
             price: 78000, 
-            description: 'Arroz con pollo, papas fritas y consome',
-            image: '/assets/imagenes/arroz-con-pollo.jpg' // Agrega la URL de la imagen aquí
+            description: 'Frescos mariscon con patacon',
+            image: '/assets/imagenes/seviche.jpg' // Agrega la URL de la imagen aquí
           }
         ];
       }
