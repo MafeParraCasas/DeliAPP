@@ -1,37 +1,87 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Product } from '../interfaces/product';
-import { CartService } from '../services/cart.service';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonMenuButton, IonItem, IonList, IonLabel, IonButton } from '@ionic/angular/standalone';
+import { IonicModule } from '@ionic/angular';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from '../services/auth.service';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.page.html',
   styleUrls: ['./cart.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonButtons, IonMenuButton, IonItem, IonList, IonLabel, IonButton]
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonicModule
+  ]
 })
 export class CartPage implements OnInit {
-  cartItems: { product: Product; quantity: number }[] = [];
+  profile: any = {
+    photo: 'assets/imagenes/avatar.jpeg' // Imagen por defecto
+  };
 
-  constructor(private cartService: CartService) {
-    this.cartItems = this.cartService.getCart();
-  }
+  cartItems: any[] = [];
 
+  constructor(
+    private route: ActivatedRoute,
+    private authService: AuthService,
+    private alertController: AlertController
+  ) { }
+  
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params && params['selectedItems']) {
+        this.cartItems = JSON.parse(params['selectedItems']);
+      }
+    });
+    this.profile = this.authService.getProfile();
   }
 
-  removeFromCart(product: Product) {
-    this.cartService.removeProduct(product);
-    this.cartItems = this.cartService.getCart(); // Actualizar los items del carrito
+  removeFromCart(product: any) {
+    this.cartItems = this.cartItems.filter(item => item.name !== product.name);
   }
 
-  getTotalPrice() {
-    return this.cartService.getTotalPrice();
+  getTotal(): number {
+    return this.cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   }
 
-  getTotalQuantity() {
-    return this.cartService.getTotalQuantity();
+  async confirmarPedido() {
+    const alert = await this.alertController.create({
+      header: 'Confirmar Pedido',
+      message: '¿Desea confirmar su pedido?',
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel',
+          handler: () => {
+            console.log('Pedido cancelado');
+          }
+        },
+        {
+          text: 'Sí',
+          handler: () => {
+            this.realizarPedido();
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  async realizarPedido() {
+    const alert = await this.alertController.create({
+      header: 'Pedido Realizado',
+      message: 'Su pago se realizó exitosamente. El pedido será despachado en breve.',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+  }
+
+  pay() {
+    this.confirmarPedido();
   }
 }

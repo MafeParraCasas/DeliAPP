@@ -7,6 +7,11 @@
 .logo {
   width: 10%;
   height: 10%;
+  margin-left: 60px;
+}
+
+ion-avatar {
+  margin-left: 70px; /* Ajusta el margen a la derecha del avatar */
 }
 
 h2 {
@@ -20,15 +25,10 @@ ion-toolbar {
   color: azure;
 }
 
-div.ini {
-  display: flex;
-  justify-content: flex-start;
-}
-
 div.container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center; /* Ajusta el centrado horizontal */
   align-items: center;
 }
 
@@ -87,10 +87,6 @@ div.buscador {
     width: 25vw; /* Ajusta el tamaño para pantallas más pequeñas */
   }
 
-  div.ini {
-    display: flex;
-    justify-content: flex-start;
-  }
 
   .container ion-avatar {
     width: 11vw; /* Ajusta el tamaño para pantallas más pequeñas */
@@ -103,9 +99,7 @@ ion-toolbar {
   color: azure;
 }
 
-ion-content.fonthome {
-  --background: url("../../assets/imagenes/home.png") no-repeat center center / contain;
-}
+
 
 .info-container {
   display: flex;
@@ -126,7 +120,7 @@ ion-content.fonthome {
 }
 
 ion-card {
-  --background: #edefef;
+  --background: #19422d;
   --color: #080909;
 }
 

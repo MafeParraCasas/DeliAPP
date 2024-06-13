@@ -1,16 +1,27 @@
+// cart.service.ts
+
 import { Injectable } from '@angular/core';
 import { Product } from '../interfaces/product';
 
+interface CartItem {
+  product: Product;
+  quantity: number;
+}
+
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class CartService {
-  private cart: { product: Product; quantity: number }[] = [];
+  private cart: CartItem[] = [];
+
+  constructor() { }
+
+  getCart(): CartItem[] {
+    return this.cart;
+  }
 
   addProduct(product: Product) {
-    const existingProduct = this.cart.find(
-      (item) => item.product.id === product.id
-    );
+    const existingProduct = this.cart.find(item => item.product.id === product.id);
     if (existingProduct) {
       existingProduct.quantity += 1;
     } else {
@@ -19,30 +30,9 @@ export class CartService {
   }
 
   removeProduct(product: Product) {
-    const index = this.cart.findIndex(
-      (item) => item.product.id === product.id
-    );
+    const index = this.cart.findIndex(item => item.product.id === product.id);
     if (index > -1) {
-      if (this.cart[index].quantity > 1) {
-        this.cart[index].quantity -= 1;
-      } else {
-        this.cart.splice(index, 1);
-      }
+      this.cart.splice(index, 1);
     }
-  }
-
-  getCart() {
-    return this.cart;
-  }
-
-  getTotalPrice() {
-    return this.cart.reduce(
-      (total, item) => total + item.product.price * item.quantity,
-      0
-    );
-  }
-
-  getTotalQuantity() {
-    return this.cart.reduce((total, item) => total + item.quantity, 0);
   }
 }

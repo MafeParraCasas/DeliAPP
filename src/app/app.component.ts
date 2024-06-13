@@ -10,14 +10,15 @@ import { cartOutline, cartSharp, homeOutline,homeSharp , informationCircleOutlin
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterLink, IonRouterOutlet],
+  imports: [CommonModule, RouterLink, RouterLinkActive, CommonModule, IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonListHeader, IonNote, IonMenuToggle, IonItem, IonIcon, IonLabel, IonRouterLink, IonRouterOutlet],
+  
 })
 export class AppComponent {
-  public appPages = [
+  public appPages = [ 
     { title: 'Información', url: '/info', icon: 'information-circle' },
     { title: 'inicio', url: '/inicio', icon: 'home' },
     { title: 'Mi Perfil', url: '/mi-perfil', icon: 'person-Circle' },
-    { title: 'Mis Compras', url: '/compras', icon: 'cart' },
+    { title: 'Mis Compras', url: '/pedido', icon: 'cart' },
     { title: 'Restaurantes', url: '/restaurantes', icon: 'restaurant' },
 
   ];

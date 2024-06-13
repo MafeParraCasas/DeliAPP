@@ -1,3 +1,212 @@
-ion-toolbar{
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .logo {
+    width: 10%;
+    height: 10%;
+    margin-left: 60px;
+  }
+  
+  ion-avatar {
+    margin-left: 70px; /* Ajusta el margen a la derecha del avatar */
+  }
+  
+  h2 {
+    color: #19422d; /* Cambia el color del título */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  
+  ion-toolbar {
     background-color: var(--ion-color-mycolor);
-}
+    color: azure;
+  }
+  
+  div.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Ajusta el centrado horizontal */
+    align-items: center;
+  }
+  
+  .logo {
+    width: 10%;
+    height: 10%;
+  }
+  
+  ion-searchbar.custom {
+    --background: hsl(149, 45%, 18%);
+    --color: #fff;
+    --placeholder-color: #fff;
+    --icon-color: #fff;
+    --clear-button-color: #fff;
+    --border-radius: 4px;
+  }
+  
+  ion-searchbar.ios.custom {
+    --cancel-button-color: #19422d;
+  }
+  
+  ion-searchbar.md.custom {
+    --cancel-button-color: #fff;
+  }
+  
+  div.buscador {
+    margin-top: 3%;
+  }
+  
+  .toolbar-title {
+    width: 0%;
+  }
+  
+  .text {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+  
+  .migapan {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(232, 239, 245);
+  }
+  
+  .tex {
+    margin: 4%;
+  }
+  
+  @media (max-width: 600px) {
+    .container .logo {
+      width: 25vw; /* Ajusta el tamaño para pantallas más pequeñas */
+    }
+  
+  
+    .container ion-avatar {
+      width: 11vw; /* Ajusta el tamaño para pantallas más pequeñas */
+      height: 11vw; /* Asegúrate de que el ancho y alto sean iguales */
+    }
+  }
+
+/* Estilos para la página de carrito de compras */
+
+/* Ajusta el margen superior del ion-content para que haya espacio entre el header y el contenido */
+ion-content {
+    --ion-safe-area-top: 0px;
+    padding: 16px;
+    background-color: #faf9f8; /* Fondo ligero para mejorar la legibilidad */
+  }
+  
+  /* Estilo para los ítems en la lista de productos del carrito */
+  ion-item {
+    --inner-padding-start: 10px; /* Ajusta el espacio interno de los ítems */
+    --inner-padding-end: 10px;
+    background-color: #19422d; /* Fondo blanco para cada ítem */
+    border-radius: 8px; /* Bordes redondeados para los ítems */
+    margin-bottom: 12px; /* Espacio entre los ítems */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de profundidad */
+    padding: 8px;
+  }
+  
+  /* Estilo para el ion-thumbnail dentro de los ítems */
+  ion-thumbnail {
+    width: 80px; /* Ancho fijo para el thumbnail */
+    height: 80px; /* Alto fijo para el thumbnail */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+  }
+  
+  ion-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  /* Estilo para el ion-label dentro de los ítems */
+  ion-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+  }
+  
+  ion-label h2 {
+    font-size: 1.1em;
+    margin: 0;
+    color: #000; /* Color del texto (negro) */
+  }
+  
+  ion-label p {
+    font-size: 0.9em;
+    color: #666; /* Color del texto (gris oscuro) */
+    margin: 4px 0;
+  }
+  
+  .price-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #ff5722; /* Color destacado para el precio (naranja) */
+  }
+  
+  .quantity {
+    font-size: 0.9em;
+    color: #000; /* Color del texto (negro) */
+  }
+  
+  /* Estilo para el botón de eliminar */
+  ion-item ion-button {
+    --background: #ff5722; /* Color de fondo para el botón de eliminar (naranja) */
+    color: #fff; /* Color del texto para el botón de eliminar */
+  }
+  
+  /* Estilo para los botones de pago */
+  ion-button {
+    margin-top: 10px;
+    background-color: #ff5722; /* Color de fondo para los botones */
+    color: #ffffff; /* Color de texto para los botones */
+    border-radius: 8px; /* Bordes redondeados para los botones */
+    font-size: 1em;
+    font-weight: bold;
+    --padding-start: 16px;
+    --padding-end: 16px;
+  }
+  
+  /* Estilo para el footer */
+  ion-footer {
+    background-color: #ffffff; /* Fondo blanco para el footer */
+    border-top: 1px solid #19422d; /* Borde superior para el footer */
+    padding: 16px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de profundidad */
+  }
+  
+  /* Estilo para el total en el footer */
+  ion-item:last-child {
+    margin-bottom: 0; /* Remueve el margen inferior del último ítem */
+    padding: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    background-color: #19422d;
+    border-radius: 8px;
+  }
+  
+  /* Estilo específico para el ion-note en el footer */
+  ion-note {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff5722; /* Color destacado para el total */
+  }
+  
+  

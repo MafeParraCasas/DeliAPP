@@ -29,8 +29,8 @@ export const routes: Routes = [
   },
 
   {
-    path: 'compras',
-    loadComponent: () => import('./compras/compras.page').then( m => m.ComprasPage)
+    path: 'pedido',
+    loadComponent: () => import('./pedido/pedido.page').then( m => m.PedidoPage)
   },
   {
     path: 'mi-perfil',
@@ -47,5 +47,15 @@ export const routes: Routes = [
   {
     path: 'pagar',
     loadComponent: () => import('./pagos/pagos.page').then( m => m.PagosPage)
+  },
+
+  {
+    path: 'cart',
+    loadComponent: () => import('./cart/cart.page').then( m => m.CartPage)
+  },
+
+  {
+    path: 'menu',
+    loadComponent: () => import('./menu/menu.page').then( m => m.MenuPage)
   },
 ];

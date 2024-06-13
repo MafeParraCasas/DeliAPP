@@ -5,8 +5,13 @@
 }
 
 .logo {
-  width: 10%;
-  height: 10%;
+    width: 10%;
+    height: 10%;
+    margin-left: 60px;
+}
+
+ion-avatar {
+  margin-left: 70px; /* Ajusta el margen a la derecha del avatar */
 }
 
 /* Asegúrate de que los estilos de la franja verde se apliquen correctamente */
@@ -21,17 +26,7 @@ ion-toolbar {
   color: azure;
 }
 
-div.ini {
-  display: flex;
-  justify-content: flex-start;
-}
 
-div.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /* Scoped components require higher specificity to customize */
 ion-searchbar.custom {
@@ -84,10 +79,6 @@ div.buscador {
     width: 25vw; /* Ajusta el tamaño para pantallas más pequeñas */
   }
 
-  div.ini {
-    display: flex;
-    justify-content: flex-start;
-  }
 
   .container ion-avatar {
     width: 11vw; /* Ajusta el tamaño para pantallas más pequeñas */

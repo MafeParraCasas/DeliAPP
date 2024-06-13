@@ -7,6 +7,11 @@
 .logo {
   width: 10%;
   height: 10%;
+  margin-left: 60px;
+}
+
+ion-avatar {
+margin-left: 70px; /* Ajusta el margen a la derecha del avatar */
 }
 
 /* Asegúrate de que los estilos de la franja verde se apliquen correctamente */
@@ -21,17 +26,7 @@ ion-toolbar {
   color: azure;
 }
 
-div.ini {
-  display: flex;
-  justify-content: flex-start;
-}
 
-div.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .logo {
   width: 10%;
@@ -89,11 +84,6 @@ div.buscador {
     width: 25vw; /* Ajusta el tamaño para pantallas más pequeñas */
   }
 
-  div.ini {
-    display: flex;
-    justify-content: flex-start;
-  }
-
   .container ion-avatar {
     width: 11vw; /* Ajusta el tamaño para pantallas más pequeñas */
     height: 11vw; /* Asegúrate de que el ancho y alto sean iguales */
@@ -110,37 +100,43 @@ div.buscador {
 
 .restaurant-container {
   display: flex;
+  flex-direction: column; /* Cambia a columna para que la imagen quede arriba */
   align-items: center;
-  background-color: rgb(37, 37, 37); /* Aplica un fondo negro al contenedor principal */
-  border-radius: 10px; /* Añade bordes redondeados */
+  background-color: #19422d; /* Fondo gris claro */
   padding: 10px; /* Añade un poco de espacio interior */
   margin-bottom: 10px; /* Espacio entre los ítems */
+  border: 1px solid #c5c3c3; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  width: 100%;
 }
 
 .restaurant-thumbnail {
-  width: 100px; /* Ajusta el ancho del thumbnail según sea necesario */
-  height: 100px; /* Ajusta el alto del thumbnail según sea necesario */
-  margin-right: 10px; /* Espacio entre la imagen y el texto */
-  background-color: rgb(0, 0, 0); /* Aplica un fondo negro al contenedor de la imagen */
-  border-radius: 10px; /* Añade bordes redondeados */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: auto; /* Ajusta la altura automáticamente */
+  margin-bottom: 5px; /* Reducir el espacio entre la imagen y el texto */
 }
 
 .restaurant-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta la imagen para que mantenga sus proporciones */
-  border-radius: 10px; /* Añade bordes redondeados */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: auto; /* Ajusta el alto automáticamente para mantener la proporción */
+  border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
 }
 
 .restaurant-details {
-  flex: 1; /* El contenido ocupa todo el espacio disponible */
-  background-color: rgb(37, 37, 37); /* Aplica un fondo negro al contenedor */
-  border-radius: 10px; /* Añade bordes redondeados */
-  padding: 10px; /* Espaciado interior */
-  color: white; /* Color del texto dentro del contenedor */
+  width: 100%; /* Asegura que los detalles ocupen todo el ancho disponible */
+  background-color: #f8f8f8; /* Fondo gris claro */
+  border-radius: 0 0 8px 8px; /* Bordes redondeados solo en la parte inferior */
+  padding: 5px; /* Reducir el espaciado interior */
+  color: black; /* Color del texto dentro del contenedor */
+  text-align: center; /* Centrar el texto horizontalmente */
 }
 
+.restaurant-details p {
+  margin: 5px 0; /* Reducir los márgenes superior e inferior de los párrafos */
+}
 
 .pedido-button {
-  margin-top: 10px; /* Agrega un margen superior para separar el botón */
+  margin-top: 5px; /* Reducir el margen superior para el botón */
+  width: 100%; /* Botón ocupa el 100% del ancho del contenedor */
 }

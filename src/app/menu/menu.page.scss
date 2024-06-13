@@ -1,0 +1,214 @@
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+  }
+  
+  .logo {
+    width: 10%;
+    height: 10%;
+    margin-left: 60px;
+  }
+  
+  ion-avatar {
+    margin-left: 70px; /* Ajusta el margen a la derecha del avatar */
+  }
+  
+  h2 {
+    color: #19422d; /* Cambia el color del título */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    text-align: center; /* Centra el texto horizontalmente */
+  }
+  
+  ion-toolbar {
+    background-color: var(--ion-color-mycolor);
+    color: azure;
+  }
+  
+  div.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Ajusta el centrado horizontal */
+    align-items: center;
+  }
+  
+  .logo {
+    width: 10%;
+    height: 10%;
+  }
+  
+  ion-searchbar.custom {
+    --background: hsl(149, 45%, 18%);
+    --color: #fff;
+    --placeholder-color: #fff;
+    --icon-color: #fff;
+    --clear-button-color: #fff;
+    --border-radius: 4px;
+  }
+  
+  ion-searchbar.ios.custom {
+    --cancel-button-color: #19422d;
+  }
+  
+  ion-searchbar.md.custom {
+    --cancel-button-color: #fff;
+  }
+  
+  div.buscador {
+    margin-top: 3%;
+  }
+  
+  .toolbar-title {
+    width: 0%;
+  }
+  
+  .text {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+  }
+  
+  .migapan {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(232, 239, 245);
+  }
+  
+  .tex {
+    margin: 4%;
+  }
+  
+  @media (max-width: 600px) {
+    .container .logo {
+      width: 25vw; /* Ajusta el tamaño para pantallas más pequeñas */
+    }
+  
+  
+    .container ion-avatar {
+      width: 11vw; /* Ajusta el tamaño para pantallas más pequeñas */
+      height: 11vw; /* Asegúrate de que el ancho y alto sean iguales */
+    }
+  }
+
+/* Estilos para la página del menú */
+
+/* Ajusta el margen superior del ion-content para que haya espacio entre el header y el contenido */
+ion-content {
+    --ion-safe-area-top: 0px;
+    padding: 16px;
+    background-color: #f8f9fa; /* Fondo ligero para mejorar la legibilidad */
+  }
+  
+  /* Estilo para los ítems en la lista del menú */
+  ion-item {
+    --inner-padding-start: 10px; /* Ajusta el espacio interno de los ítems */
+    --inner-padding-end: 10px;
+    background-color: #19422d; /* Fondo blanco para cada ítem */
+    border-radius: 8px; /* Bordes redondeados para los ítems */
+    margin-bottom: 12px; /* Espacio entre los ítems */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de profundidad */
+    padding: 8px; /* Ajuste del padding para un diseño más compacto */
+  }
+  
+  /* Estilo para el ion-thumbnail dentro de los ítems */
+  ion-thumbnail {
+    width: 80px; /* Ancho fijo para el thumbnail */
+    height: 80px; /* Alto fijo para el thumbnail */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+  }
+  
+  ion-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  /* Estilo para el ion-label dentro de los ítems */
+  ion-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente el contenido */
+  }
+  
+  ion-label h2 {
+    font-size: 1.1em;
+    margin: 0;
+    color: #333;
+  }
+  
+  ion-label p {
+    font-size: 0.9em;
+    color: #666666;
+    margin: 4px 0;
+  }
+  
+  ion-label .price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #ff5722; /* Color destacado para el precio */
+    margin-top: 4px; /* Reducir el margen superior */
+  }
+  
+  /* Estilo para el contenedor de cantidad y botón de agregar */
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  /* Estilo para los botones de cantidad */
+  .quantity-controls ion-button {
+    --background: #19422d; /* Color de fondo rojo para los botones de cantidad */
+    color: #fff; /* Color de texto para los botones de cantidad */
+    border-radius: 50%; /* Botones redondos */
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0;
+  }
+  
+  /* Estilo para la cantidad */
+  .quantity-controls span {
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 8px; /* Espaciado entre los botones */
+  }
+  
+  /* Estilo para el botón de pagar */
+  .pay-button {
+    margin-top: 20px;
+    background-color: #28a745; /* Color de fondo para el botón de pagar */
+    color: #fff; /* Color de texto para el botón de pagar */
+    border-radius: 8px; /* Bordes redondeados para el botón de pagar */
+    font-size: 1em;
+    font-weight: bold;
+    padding: 12px 16px;
+    text-align: center;
+    display: block;
+  }
+  
+  /* Estilo para el ion-footer */
+  ion-footer {
+    background-color: #ffffff; /* Fondo blanco para el footer */
+    border-top: 1px solid #e0e0e0; /* Borde superior para el footer */
+    padding: 16px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de profundidad */
+  }
+  
+  /* Estilo específico para el ion-note en el footer */
+  ion-note {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff5722; /* Color destacado para el total */
+  }
+  
