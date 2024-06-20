@@ -7,7 +7,7 @@ ion-content {
 }
 
 form {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente */
+  background-color: rgba(0, 0, 0, 0.39); /* Fondo semi-transparente */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -36,6 +36,10 @@ label {
   margin-bottom: 10px;
   color: #fff;
   text-align: center;
+  padding: 1px;
+}
+.password{
+  margin-top: 15px;
 }
 
 input[type="text"],
@@ -48,6 +52,7 @@ input[type="password"] {
   border-radius: 5px;
   margin: 0 auto;
   display: block;
+  margin-top:40px;
   color: #070707; /* Color del texto */
 }
 
@@ -57,9 +62,10 @@ button[type="submit"] {
   background-color: #007bff;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  margin: 20px auto 0;
+  margin: 25px auto 0;
+  margin-top:40px;
   display: block;
 }
 
@@ -70,11 +76,14 @@ button[type="submit"]:hover {
 p {
   text-align: center;
   color: #fff;
+  margin-top:80%;
+  background-color: rgba(207, 204, 204, 0.358);
 }
 
 a {
-  color: #007bff;
+  color: rgb(18, 133, 248);
   text-decoration: none;
+
 }
 
 a:hover {
