@@ -17,4 +17,4 @@ export class PedidoService {
       // Si ocurre un error al guardar el pedido, llama a reject() con el error correspondiente
     });
   }
-}
+} 
