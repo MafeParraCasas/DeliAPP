@@ -14,19 +14,32 @@
 
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Pedidos</ion-title>
+    <ion-title>Historial de Pedidos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <!-- Aquí va el contenido de tu página de compras -->
+  <div class="pedido-container">
+    <ion-card *ngFor="let pedido of historialPedidos">
+      <ion-card-header>
+        <ion-card-title>Pedido #{{ pedido.numeroPedido }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Productos:</p>
+        <ul>
+          <li *ngFor="let producto of pedido.productos">
+            {{ producto.name }} - {{ producto.price | currency }} x {{ producto.quantity }}
+          </li>
+        </ul>
+        <p><strong>Total: {{ pedido.total | currency }}</strong></p>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
 
 <ion-footer>
   <ion-item>
-    <ion-label class="total-label">Total</ion-label>
+    <ion-label class="total-label">Total Historial</ion-label>
     <ion-note>{{ getTotal() | currency }}</ion-note>
   </ion-item>
-  <ion-button expand="block" (click)="confirmarPedido()">Confirmar Pedido</ion-button>
 </ion-footer>
-

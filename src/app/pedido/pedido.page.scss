@@ -1,8 +1,117 @@
-/* pedido.page.scss */
+.container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
 
-/* Agrega tus estilos personalizados aquí si los necesitas */
-.total-label {
+.logo {
+  width: 10%;
+  height: 10%;
+  margin-left: 60px;
+}
+
+ion-avatar {
+  margin-left: 70px; /* Ajusta el margen a la derecha del avatar */
+}
+
+h2 {
+  color: #19422d; /* Cambia el color del título */
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+ion-toolbar {
+  background-color: var(--ion-color-mycolor);
+  color: azure;
+}
+
+div.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* Ajusta el centrado horizontal */
+  align-items: center;
+}
+
+.logo {
+  width: 10%;
+  height: 10%;
+}
+
+ion-searchbar.custom {
+  --background: hsl(149, 45%, 18%);
+  --color: #fff;
+  --placeholder-color: #fff;
+  --icon-color: #fff;
+  --clear-button-color: #fff;
+  --border-radius: 4px;
+}
+
+ion-searchbar.ios.custom {
+  --cancel-button-color: #19422d;
+}
+
+ion-searchbar.md.custom {
+  --cancel-button-color: #fff;
+}
+
+div.buscador {
+  margin-top: 3%;
+}
+
+.toolbar-title {
+  width: 0%;
+}
+
+.text {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
-  font-size: 1.2em;
-  color: #333;
+}
+
+.migapan {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(232, 239, 245);
+}
+
+.tex {
+  margin: 4%;
+}
+
+.pedido-container {
+  padding: 15px;
+}
+
+ion-card {
+  margin-bottom: 20px;
+}
+
+ion-card-header {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+}
+
+ion-card-title {
+  color: #19422d;
+  font-weight: bold;
+}
+
+ion-card-content {
+  font-size: 14px;
+  color: #444;
+}
+
+@media (max-width: 600px) {
+  .container .logo {
+    width: 25vw; /* Ajusta el tamaño para pantallas más pequeñas */
+  }
+
+  .container ion-avatar {
+    width: 11vw; /* Ajusta el tamaño para pantallas más pequeñas */
+    height: 11vw; /* Asegúrate de que el ancho y alto sean iguales */
+  }
 }

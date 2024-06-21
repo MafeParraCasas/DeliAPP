@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { AlertController } from '@ionic/angular';
+import { PedidoService } from '../services/pedido.service';
 
 @Component({
   selector: 'app-cart',
@@ -26,10 +27,12 @@ export class CartPage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router, // Añadir el Router
     private authService: AuthService,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private pedidoService: PedidoService // Inyectar el servicio de pedidos
   ) { }
-  
+
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       if (params && params['selectedItems']) {
@@ -72,13 +75,39 @@ export class CartPage implements OnInit {
   }
 
   async realizarPedido() {
-    const alert = await this.alertController.create({
-      header: 'Pedido Realizado',
-      message: 'Su pago se realizó exitosamente. El pedido será despachado en breve.',
-      buttons: ['OK']
-    });
+    const numeroPedido = Date.now().toString(); // Generar un número de pedido único
+    const pedido = {
+      numeroPedido,
+      productos: this.cartItems,
+      total: this.getTotal()
+    };
 
-    await alert.present();
+    try {
+      await this.pedidoService.guardarPedido(pedido);
+      const alert = await this.alertController.create({
+        header: 'Pedido Realizado',
+        message: 'Su pago se realizó exitosamente. El pedido será despachado en breve.',
+        buttons: [
+          {
+            text: 'OK',
+            handler: () => {
+              this.router.navigate(['/pedido']); // Redirigir a la página de pedidos
+            }
+          }
+        ]
+      });
+
+      await alert.present();
+      this.cartItems = []; // Vaciar el carrito después de realizar el pedido
+    } catch (error) {
+      const alert = await this.alertController.create({
+        header: 'Error',
+        message: 'Ocurrió un error al guardar su pedido. Por favor, inténtelo de nuevo.',
+        buttons: ['OK']
+      });
+
+      await alert.present();
+    }
   }
 
   pay() {
