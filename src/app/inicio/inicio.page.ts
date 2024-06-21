@@ -23,7 +23,7 @@ export class InicioPage implements OnInit {
     {
       image: '../../assets/imagenes/promoSopas.jpg',
       name: 'Promo Sopas',
-      description: 'Deliciosa comida con un 15% de descuento',
+      description: 'Sopas con un 15% de descuento',
       discount: 20
     },
     {
@@ -35,25 +35,25 @@ export class InicioPage implements OnInit {
     {
       image: '../../assets/imagenes/promoMariscos.jpg',
       name: 'Promo Mariscos',
-      description: 'Deliciosos postres con un 4% de descuento',
+      description: 'Deliciosos mariscos con un 4% de descuento',
       discount: 10
     },
     {
       image: '../../assets/imagenes/promoPasta.jpg',
       name: 'Promo Pasta',
-      description: 'Deliciosa comida con un 10% de descuento',
+      description: 'Pasta Italiana con un 10% de descuento',
       discount: 20
     },
     {
       image: '../../assets/imagenes/promoCarnes.jpg',
       name: 'Promo Carnes',
-      description: 'Refrescantes bebidas con un 12% de descuento',
+      description: 'Exquisitas carnes con un 12% de descuento',
       discount: 15
     },
     {
       image: '../../assets/imagenes/promoPescados.jpg',
       name: 'Promo Pescados',
-      description: 'Deliciosos postres con un 18% de descuento',
+      description: 'Pescados con un 18% de descuento',
       discount: 10
     }
     // Agrega más promociones según sea necesario
